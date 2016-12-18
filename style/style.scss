@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+@font-face {
+  font-family: 'Flatform Light';
+  src: url('../font/Flatform_Light.woff');
+}
+@font-face {
+  font-family: 'semibold';
+  src: url('../font/semibold.ttf');
+}
+@font-face {
+  font-family: 'opensansbold';
+  src: url('../font/OpenSans-Bold.ttf');
+}
+@font-face {
+  font-family: 'opensansbolditalic';
+  src: url('../font/OpenSans-BoldItalic.ttf');
+}
+
+$gray: #717171;
+$fly: #F7F7F7;
+$brand: #D2D1D1;
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.clerfix:after, header {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.h3 {
+  font: 20px 'opensansbold';
+  text-transform: uppercase;
+  color: #4D4D4D;
+}
+
+body {
+  width: 100%;
+  max-width: 960px;
+  min-width: 320px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  padding: 0 2px;
+  text-align: center;
+  color: $gray;
+  font: 15px 'Nunito Sans', sans-serif;;
+}
+
+header {
+  position: relative;
+  width: 100%;
+}
+
+h1 {
+  font: 3em 'Flatform Light';
+  float: left;
+}
+
+.menu {
+  display: inline-block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: black;
+  cursor: pointer;
+}
+
+.navigationOn {
+  display: none;
+}
+
+.navigation {
+  position: absolute;
+  display: none;
+  height: 600px;
+  width: 101%;
+  padding: 58px 0;
+  margin: 0px -3px;
+  left: 1px;
+  background: rgba(0, 0, 0, 0.88);
+  font: 20px 'Nunito Sans', sans-serif;
+  a {
+    color: white;
+    &:hover {
+      border-bottom: 1px solid white;
+    }
+  }
+}
+
+.menu:active .navigation {
+  display: block;
+}
+
+.navigation:hover {
+  display: block;
+}
+
+// Основной контент
+
+.billBoard {
+  background: url('../img/background.png') no-repeat 100% 98%;
+  background-size: cover;
+  padding: 0 1em 5em;
+}
+
+h2 {
+  font-size: 30px;
+  padding: 3em 0 0.2em;
+}
+
+.link {
+  display: inline-block;
+  width: 215px;
+  padding: 5px 0;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.49);
+  text-transform: uppercase;
+  font-family: 'semibold';
+  color: white;
+  transition: 0.2s;
+  &:hover {
+    background: rgba(30, 48, 76, 0.78);
+    box-shadow: 0 0 5px black;
+    text-shadow: 0 0 5px #a0a0a0;
+  }
+}
+
+.services {
+  margin: 15px 0;
+}
+
+.ser {
+  display: inline-block;
+  width: 250px;
+}
+
+h4 {
+  font: 16px 'opensansbold';
+  text-transform: uppercase;
+  color: #4D4D4D;
+}
+
+.sprite {
+  display: inline-block;
+  width: 85px;
+  height: 80px;
+  background: url(../img/sprite.png) no-repeat 6px -5px;
+}
+
+.clock {background-position: -77px -5px;}
+.photo {background-position: -173px -5px;}
+
+.video {
+  p {
+    width: 55%;
+    margin: 0 auto;
+  }
+}
+
+.player {
+  width: 100%;
+  max-width: 550px;
+  margin: 20px 0;
+}
+
+.recentWork div:first-child {
+  margin-left: 0;
+}
+
+.recentWork div:last-child {
+  margin-right: 0;
+}
+
+.brand {
+  display: inline-block;
+  width: 175px;
+  height: 215px;
+  margin: 5px 8px;
+  background: $fly;
+  p {
+    font: 16px 'opensansbolditalic';
+    padding: 85px 0px 0;
+    color: $brand;
+    line-height: 10px;
+  }
+  span {
+    font-size: 10px;
+  }
+}
+
+
+
+@media all and (min-width: 670px) {
+
+  .menu {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+  }
+
+  nav {
+    float: right;
+  }
+  
+  .navigationOn {
+    display: block;
+    margin: 28px 0 0;
+    font: 15px 'Nunito Sans', sans-serif;
+    li {
+      float: left;
+    }
+  }
+
+  .navigationOn a {
+    margin: 0 25px;
+    display: inline-block;
+    color: $gray;
+    &:hover {
+      border-bottom: 1px solid $gray;
+    }
+  }
+
+  //  Основной контент
+  .billBoard h2 {
+    padding: 7em 0 3em;
+  }
+
+}
