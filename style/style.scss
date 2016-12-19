@@ -28,7 +28,9 @@ $brand: #D2D1D1;
   text-decoration: none;
 }
 
-.clerfix:after, header {
+.clerfix:after,
+.header,
+.nav__list {
   content: '';
   display: table;
   clear: both;
@@ -52,53 +54,19 @@ body {
   font: 15px 'Nunito Sans', sans-serif;;
 }
 
-header {
+.header {
   position: relative;
   width: 100%;
-}
-
-h1 {
-  font: 3em 'Flatform Light';
-  float: left;
-}
-
-.menu {
-  display: inline-block;
-  float: right;
-  width: 30px;
-  height: 30px;
-  background: black;
-  cursor: pointer;
-}
-
-.navigationOn {
-  display: none;
-}
-
-.navigation {
-  position: absolute;
-  display: none;
-  height: 600px;
-  width: 101%;
-  padding: 58px 0;
-  margin: 0px -3px;
-  left: 1px;
-  background: rgba(0, 0, 0, 0.88);
-  font: 20px 'Nunito Sans', sans-serif;
-  a {
-    color: white;
-    &:hover {
-      border-bottom: 1px solid white;
-    }
+  &__h1 {
+    font: 3em 'Flatform Light';
+    float: left;
   }
 }
 
-.menu:active .navigation {
-  display: block;
-}
-
-.navigation:hover {
-  display: block;
+.nav {
+  &__item {
+    float: left;
+  }
 }
 
 // Основной контент
