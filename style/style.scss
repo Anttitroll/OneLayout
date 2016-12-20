@@ -55,7 +55,6 @@ body {
 }
 
 .header {
-  position: relative;
   width: 100%;
   &__h1 {
     font: 3em 'Flatform Light';
@@ -67,22 +66,29 @@ body {
   &__item {
     float: left;
   }
+  &__link {
+    display: inline-block;
+    padding: 5px 5px;
+    &:active {
+      background: black;
+      border-radius: 5px;
+    }
+  }
 }
 
 // Основной контент
 
-.billBoard {
-  background: url('../img/background.png') no-repeat 100% 98%;
+.start {
+  background: url('../img/background-s.png') no-repeat 100% 98%;
   background-size: cover;
   padding: 0 1em 5em;
+  &__h2 {
+    font-size: 30px;
+    padding: 3em 0 0.2em;
+  }
 }
 
-h2 {
-  font-size: 30px;
-  padding: 3em 0 0.2em;
-}
-
-.link {
+.start__link {
   display: inline-block;
   width: 215px;
   padding: 5px 0;
@@ -153,7 +159,7 @@ h4 {
   background: $fly;
   p {
     font: 16px 'opensansbolditalic';
-    padding: 85px 0px 0;
+    padding: 85px 0 0;
     color: $brand;
     line-height: 10px;
   }

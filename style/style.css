@@ -54,7 +54,6 @@ body {
 }
 
 .header {
-  position: relative;
   width: 100%;
 }
 
@@ -67,18 +66,28 @@ body {
   float: left;
 }
 
-.billBoard {
-  background: url("../img/background.png") no-repeat 100% 98%;
+.nav__link {
+  display: inline-block;
+  padding: 5px 5px;
+}
+
+.nav__link:active {
+  background: black;
+  border-radius: 5px;
+}
+
+.start {
+  background: url("../img/background-s.png") no-repeat 100% 98%;
   background-size: cover;
   padding: 0 1em 5em;
 }
 
-h2 {
+.start__h2 {
   font-size: 30px;
   padding: 3em 0 0.2em;
 }
 
-.link {
+.start__link {
   display: inline-block;
   width: 215px;
   padding: 5px 0;
@@ -90,7 +99,7 @@ h2 {
   transition: 0.2s;
 }
 
-.link:hover {
+.start__link:hover {
   background: rgba(30, 48, 76, 0.78);
   box-shadow: 0 0 5px black;
   text-shadow: 0 0 5px #a0a0a0;
@@ -155,7 +164,7 @@ h4 {
 
 .brand p {
   font: 16px 'opensansbolditalic';
-  padding: 85px 0px 0;
+  padding: 85px 0 0;
   color: #D2D1D1;
   line-height: 10px;
 }
